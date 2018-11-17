@@ -3,4 +3,4 @@
 
 # Why?
 
-The QDBM Database works quite well for embedded systems that due not support multithreading. However, with the POSIX API, it only supports file access and I need to manage a QDBM database in-memory (any Stream).
+The QDBM Database works quite well for embedded systems that due not support multithreading (such as ESP8266). However, with the POSIX API, it only supports file access and I need to manage a QDBM database in-memory (any Stream).
