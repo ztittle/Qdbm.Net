@@ -2,6 +2,9 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <Description>QDBM.Net port of the QDBM Embedded Database</Description>
+        <PackageLicenseUrl>https://github.com/ztittle/Qdbm.Net/blob/master/LICENSE/PackageLicenseUrl</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/ztittle/Qdbm.Net</RepositoryUrl>
     </PropertyGroup>
 
 </Project>
