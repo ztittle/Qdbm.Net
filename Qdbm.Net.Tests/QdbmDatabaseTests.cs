@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -15,7 +16,7 @@ namespace Qdbm.Net.Tests
         public void Setup()
         {
             _ms = new MemoryStream();
-            _qdbm = new QdbmDatabase(_ms);
+            _qdbm = new QdbmDatabase(_ms, 100);
         }
         
         [TestMethod]
@@ -24,6 +25,7 @@ namespace Qdbm.Net.Tests
             #region TestKeys
             var keys = new[]
             {
+                3355440,
                 1257163,
                 6606064,
                 3472651,
@@ -954,13 +956,22 @@ namespace Qdbm.Net.Tests
             };
             #endregion
 
+            var updatedKeys = new HashSet<int>();
+
+            updatedKeys.Add(3355440);
+            updatedKeys.Add(3378835);
+
+            for (int i = 0; i < 1500; i++)
+                updatedKeys.Add(i);
+            
+
             var trueBytes = BitConverter.GetBytes(true);
-            foreach (var testKey in keys)
+            foreach (var testKey in updatedKeys)
             {
                 _qdbm.Put(new QdbmKey(testKey), trueBytes);                
             }
 
-            foreach (var testKey in keys)
+            foreach (var testKey in updatedKeys)
             {
                 var val = _qdbm.Get(new QdbmKey(testKey));
 

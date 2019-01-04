@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qdbm.Net.Tests", "Qdbm.Net.Tests\Qdbm.Net.Tests.csproj", "{7066C4D6-0AFF-4960-8A75-E8699822078C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F669F316-19C2-4B3E-B3BC-75478C300EC4}"
+ProjectSection(SolutionItems) = preProject
+	publish-snapshot.sh = publish-snapshot.sh
+EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
